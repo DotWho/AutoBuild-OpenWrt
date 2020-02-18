@@ -7,7 +7,3 @@
 #=================================================
 #1. Modify default IP
 sed -i 's/192.168.1.1/192.168.1.2/g' openwrt/package/base-files/files/bin/config_generate
-#2. add
-set luci.themes.Argon=/luci-static/argon
-set luci.main.mediaurlbase=/luci-static/argon
-commit luci
