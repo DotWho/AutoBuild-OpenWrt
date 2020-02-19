@@ -70,6 +70,7 @@ jobs:
         mkdir openwrt-packages
         cd openwrt-packages
         git clone https://github.com/frainzy1477/luci-app-clash.git
+        git clone https://github.com/Lienol/openwrt-package.git
 
     - name: Update & Install feeds
       working-directory: ./openwrt
