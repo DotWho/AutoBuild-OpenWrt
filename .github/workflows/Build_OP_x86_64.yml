@@ -62,6 +62,15 @@ jobs:
         REPO_URL: https://github.com/coolsnowwolf/lede
         REPO_BRANCH: master
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
+    
+    - name: download luci-app-clash
+      working-directory: ./openwrt
+      run: |
+        cd package
+        mkdir openwrt-packages
+        cd openwrt-packages
+        git clone https://github.com/frainzy1477/luci-app-clash.git
+        git clone https://github.com/Lienol/openwrt-package.git
 
     - name: Update & Install feeds
       working-directory: ./openwrt
