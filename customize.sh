@@ -15,3 +15,10 @@ sed -i 's/config internal themes/config internal themes\n    option Argon  \"\/l
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' openwrt/feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 #删除默认密码
 sed -i "/CYXluq4wUazHjmCDBCqXF/d" openwrt/package/lean/default-settings/files/zzz-default-settings
+
+cd /tmp
+wget https://github.com/frainzy1477/clashrdev/releases/download/v0.17.2/clashr-linux-amd64-v0.17.2.gz
+gunzip clashr-linux-amd64-v0.17.2.gz
+chmod +x clashr-linux-amd64-v0.17.2
+mv clashr-linux-amd64-v0.17.2 /usr/bin/clash
+echo 0.17.2 > /usr/share/clash/corer_version
