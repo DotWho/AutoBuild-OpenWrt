@@ -15,8 +15,3 @@ sed -i 's/config internal themes/config internal themes\n    option Argon  \"\/l
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' openwrt/feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 #删除默认密码
 sed -i "/CYXluq4wUazHjmCDBCqXF/d" openwrt/package/lean/default-settings/files/zzz-default-settings
-
-cd /tmp
-wget https://github.com/frainzy1477/clash_dev/releases/download/v0.18.0.1/clash-linux-amd64-v0.18.0.1.gz
-gunzip clash-linux-amd64-v0.18.0.1.gz
-chmod +x clash-linux-amd64-v0.18.0.1
